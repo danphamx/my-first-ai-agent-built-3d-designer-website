@@ -6,36 +6,130 @@
     <title>3D Designer Portfolio</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             margin: 0;
-            padding: 20px;
+            padding: 0;
             background-color: #f5f5f5;
+            color: #333;
         }
         
         .container {
             max-width: 1200px;
             margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        header {
             background-color: white;
             padding: 20px;
-            border-radius: 8px;
             box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            margin-bottom: 40px;
         }
 
         h1 {
-            color: #333;
+            color: #2c3e50;
             text-align: center;
+            margin-bottom: 30px;
+            font-size: 2.5em;
+        }
+
+        .about-section {
+            background-color: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            margin-bottom: 40px;
+        }
+
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+
+        .portfolio-item {
+            background-color: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .portfolio-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .portfolio-item img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .portfolio-item-content {
+            padding: 20px;
+        }
+
+        .contact-section {
+            background-color: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
         }
 
         p {
             line-height: 1.6;
             color: #666;
+            margin-bottom: 20px;
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1>Welcome to My 3D Design Portfolio</h1>
-        <p>Hello! I'm a passionate 3D designer creating immersive digital experiences. This space will showcase my work and creative journey.</p>
-    </div>
+    <header>
+        <div class="container">
+            <h1>Welcome to My 3D Design Portfolio</h1>
+            <p>Creating immersive digital experiences through innovative 3D design</p>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="about-section">
+            <h2>About Me</h2>
+            <p>I'm a passionate 3D designer with expertise in creating compelling digital experiences. With years of experience in the industry, I specialize in bringing creative visions to life through detailed 3D modeling and animation.</p>
+            <p>My toolkit includes: Maya, Blender, ZBrush, and Substance Painter</p>
+        </section>
+
+        <section class="portfolio-grid">
+            <div class="portfolio-item">
+                <img src="/api/placeholder/400/320" alt="Project 1">
+                <div class="portfolio-item-content">
+                    <h3>Character Design</h3>
+                    <p>3D character design for an upcoming game project</p>
+                </div>
+            </div>
+            <div class="portfolio-item">
+                <img src="/api/placeholder/400/320" alt="Project 2">
+                <div class="portfolio-item-content">
+                    <h3>Environmental Design</h3>
+                    <p>Detailed environment modeling for virtual reality experience</p>
+                </div>
+            </div>
+            <div class="portfolio-item">
+                <img src="/api/placeholder/400/320" alt="Project 3">
+                <div class="portfolio-item-content">
+                    <h3>Product Visualization</h3>
+                    <p>Photorealistic product rendering for marketing campaign</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="contact-section">
+            <h2>Contact Me</h2>
+            <p>I'm always interested in exciting new projects. Let's create something amazing together!</p>
+            <p>Email: contact@example.com</p>
+            <p>LinkedIn: linkedin.com/in/example</p>
+            <p>ArtStation: artstation.com/example</p>
+        </section>
+    </main>
 </body>
 </html>
